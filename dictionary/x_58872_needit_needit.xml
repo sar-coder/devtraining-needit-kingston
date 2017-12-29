@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
-        <element display="true" label="Cool record?" max_length="40" name="u_cool_record" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="How cool?" max_length="40" name="u_choice_1" type="string">
+            <choice>
+                <element label="Not bad" sequence="0" value="1"/>
+                <element label="Pretty cool" sequence="1" value="2"/>
+                <element label="Awesome!" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="Cool record?" max_length="40" name="u_cool_record" type="boolean"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>

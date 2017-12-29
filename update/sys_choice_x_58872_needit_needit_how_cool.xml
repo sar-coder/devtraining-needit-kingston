@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="how_cool" table="x_58872_needit_needit" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_cool</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- New choice --</label>
+            <language>en</language>
+            <name>x_58872_needit_needit</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-12-29 15:35:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f77208520f9b030075b80cbce1050e08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-12-29 15:35:08</sys_updated_on>
+            <value>-- New choice --</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_cool</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>awesome!</label>
+            <language>en</language>
+            <name>x_58872_needit_needit</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-12-29 15:38:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2903c4920f9b030075b80cbce1050e08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-12-29 15:38:02</sys_updated_on>
+            <value>Dude, this is just amazingly awesome to the max!</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_cool</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not bad</label>
+            <language>en</language>
+            <name>x_58872_needit_needit</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-12-29 15:36:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>50c2c4920f9b030075b80cbce1050ea1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-12-29 15:36:47</sys_updated_on>
+            <value>It's not too bad I suppose.</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>how_cool</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>It's cool</label>
+            <language>en</language>
+            <name>x_58872_needit_needit</name>
+            <sequence/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-12-29 15:37:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2ee288920f9b030075b80cbce1050e90</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-12-29 15:37:21</sys_updated_on>
+            <value>This is actually pretty cool!</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>how_cool</element>
+            <name>x_58872_needit_needit</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-12-29 15:35:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>377284920f9b030075b80cbce1050eb6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>how_cool</sys_name>
+            <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+            <sys_update_name>sys_choice_x_58872_needit_needit_how_cool</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-12-29 15:35:08</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
