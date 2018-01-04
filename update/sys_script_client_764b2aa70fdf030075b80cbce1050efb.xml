@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>Only display 'What needed' choices that match the 'Request type' value.&#13;
@@ -21,13 +21,9 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	if ( newValue == '') {
 		return;
 	}	
-
-	logIt('running...');
 	
 	var _whatneeded = g_form.getValue('u_what_needed');
-	
-	logIt(control.name.split('.')[1] + ' - ' + oldValue + ' ' + newValue);
-	
+
 	if(control.name.split('.')[1] == 'u_request_type') {
 		g_form.clearOptions('u_what_needed');
 		switch(newValue) {
@@ -44,20 +40,21 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 				g_form.addOption('u_what_needed', 'legal2', 'Legal 2');
 				break;
 		}
-		g_form.addOption('u_what_needed', 'other', 'Otfher');
+		g_form.addOption('u_what_needed', 'other', 'Otfher'); //need this option for all request types selected
 		
 	}
-	else if(control.name.split('.')[1] == 'priority') {
+	else if(control.name.split('.')[1] == 'priority') { //doesn't work because SN applies onChange() event handler to one field only (u_request_type in this case)
 		logIt('You changed the Priority from ' + oldValue + ' to ' + newValue);
 	}
-	else if(control.name.split('.')[1] == 'u_cool_record') {
+	else if(control.name.split('.')[1] == 'u_cool_record') { //doesn't work because SN applies onChange() event handler to one field only (u_request_type in this case)
 		logIt('You changed the "Cool Record?" from ' + oldValue + ' to ' + newValue);
 	}
+	logIt(control.name.split('.')[1] + ' selection changed from [' + oldValue + '] to [' + newValue + ']');
 	
 	// If the form is loading and it is not a new record, set the u_what_needed value to the
 	// value from the record before it was loaded	
 	if(isLoading && !g_form.isNewRecord()){
-		//g_form.setValue('u_what_needed', _whatneeded);
+		g_form.setValue('u_what_needed', _whatneeded); //update to value stored in db
 	}	
    
 }]]></script>
@@ -68,7 +65,7 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>764b2aa70fdf030075b80cbce1050efb</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>NeedIt Request Type Options</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -77,7 +74,7 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_client_764b2aa70fdf030075b80cbce1050efb</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-04 01:30:11</sys_updated_on>
+        <sys_updated_on>2018-01-04 19:57:32</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>Set the Requested for to the currently logged in user for new records. Users can change the field value</description>
@@ -18,11 +18,11 @@
 
 function onLoad() {
 	if(g_form.isNewRecord()) {
-		//g_form.setValue('u_requested_for', g_user.getFullName());
+		//g_form.setValue('u_requested_for', g_user.getFullName()); //this seems to work too
 		g_form.setValue('u_requested_for', g_user.userID);
 		logIt('Set current user as default value for "Requested For" field (' + g_user.userID + ')  (' + g_user.getFullName() + ')');
 	}
-	
+	/*
 	try {
 		//hellowWorld();
 		throw new Error('This is a big error!');
@@ -30,7 +30,7 @@ function onLoad() {
 	catch(e) {
 		logIt('Error: [' + e.name + '] ' + e.message);
 	}
-  
+	*/
 }
 ]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -40,7 +40,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>49e772af0fdf030075b80cbce1050e1b</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>NeedIt Set Requested for</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -49,7 +49,7 @@ function onLoad() {
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_client_49e772af0fdf030075b80cbce1050e1b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-04 01:30:03</sys_updated_on>
+        <sys_updated_on>2018-01-04 19:17:52</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>
