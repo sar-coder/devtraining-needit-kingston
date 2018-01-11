@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.NeedItUtils</api_name>
+        <client_callable>false</client_callable>
+        <description>Utils Script Include for the NeedIt application.</description>
+        <name>NeedItUtils</name>
+        <script><![CDATA[var NeedItUtils = Class.create();
+NeedItUtils.prototype = {
+    initialize: function() {
+    },
+
+    type: 'NeedItUtils',
+	
+	isDatePast: function(pDate) {
+		var _now  = new GlideDateTime();
+		var _date = new GlideDateTime(pDate);
+		
+		//gs.addInfoMessage('isDatePast: ' + _now + ' - ' + _date);
+		
+		//if(_date.before(_now)) {
+		if(_date < _now) {
+			//gs.addInfoMessage("Date is in the past!");
+			return true;
+		}
+		//gs.addInfoMessage("Date is NOT in the past!");
+		return false;
+	},
+	
+	isDateToday: function(pDate){
+		//var _now  = new GlideDate();
+		//var _date = new GlideDate(); //GlideDate adds 7 hours to pDate??
+		//_date.setValue(pDate);
+		var _now  = new GlideDateTime();
+		var _date = new GlideDateTime(pDate);
+		_now      = _now.getLocalDate();
+		_date     = _date.getLocalDate();
+		
+		//gs.addInfoMessage('isDateToday: ' + _now + ' - ' + _date);
+		
+		if(_date == _now) {
+			//gs.addInfoMessage("Date is Today!!");
+			return true;
+		}
+		//gs.addInfoMessage("Date is NOT Today!");
+		return false;
+	}
+	
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-11 00:14:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>276b63420fef030075b80cbce1050eb8</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>NeedItUtils</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_276b63420fef030075b80cbce1050eb8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-11 12:52:30</sys_updated_on>
+    </sys_script_include>
+</record_update>

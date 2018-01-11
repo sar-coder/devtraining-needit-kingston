@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_push_notif_app_install">
+    <sys_push_notif_app_install action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <last_registered_on>2018-01-07 02:49:27</last_registered_on>
+        <sys_class_name>sys_push_notif_app_install</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-07 02:49:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>578967b80f67030075b80cbce1050e8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dW2wGC4TinE:APA91bEtnnpa8Id5If6Dw1BCsSlB_ctAOMQN9CH8dCQMin_rftLFSELneoUvqTs2ZLJ-xUzO052b28UmACCGphjXoemDGFV1vK6yaFsvsl4kkZFfZ8VND8pml7_xN8xlpy5WCcR-Knf_</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_push_application_id display_value="ServiceNow Mobile Application">ab704041ff1102009738ffffffffff33</sys_push_application_id>
+        <sys_push_platform_id display_value="Google">53e75f30ff0002009738ffffffffff12</sys_push_platform_id>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_push_notif_app_install_578967b80f67030075b80cbce1050e8b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-07 02:49:27</sys_updated_on>
+        <sys_user_id display_value="Steve Rader">6816f79cc0a8016401c5a33be04be441</sys_user_id>
+        <token>dW2wGC4TinE:APA91bEtnnpa8Id5If6Dw1BCsSlB_ctAOMQN9CH8dCQMin_rftLFSELneoUvqTs2ZLJ-xUzO052b28UmACCGphjXoemDGFV1vK6yaFsvsl4kkZFfZ8VND8pml7_xN8xlpy5WCcR-Knf_</token>
+    </sys_push_notif_app_install>
+</record_update>
