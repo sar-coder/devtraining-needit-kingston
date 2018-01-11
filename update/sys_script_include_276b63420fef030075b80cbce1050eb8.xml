@@ -8,11 +8,27 @@
         <description>Utils Script Include for the NeedIt application.</description>
         <name>NeedItUtils</name>
         <script><![CDATA[var NeedItUtils = Class.create();
+//This lives in SarTools() class but is here only for demo
+NeedItUtils.isValidEmailAddress = function(pValue) {  
+	if(String(pValue).match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+		return true;
+	}
+	return false;
+};
+
 NeedItUtils.prototype = {
     initialize: function() {
     },
 
     type: 'NeedItUtils',
+	
+	//This lives in SarTools() class but is here only for demo
+	isValidEmail: function(pValue) {
+		if(pValue.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+			return true;
+		}
+		return false;
+	},
 	
 	isDatePast: function(pDate) {
 		var _now  = new GlideDateTime();
@@ -33,12 +49,8 @@ NeedItUtils.prototype = {
 		//var _now  = new GlideDate();
 		//var _date = new GlideDate(); //GlideDate adds 7 hours to pDate??
 		//_date.setValue(pDate);
-		var _now  = new GlideDateTime();
-		var _date = new GlideDateTime(pDate);
-		_now      = _now.getLocalDate();
-		_date     = _date.getLocalDate();
-		
-		//gs.addInfoMessage('isDateToday: ' + _now + ' - ' + _date);
+		var _now  = new GlideDateTime().getLocalDate();
+		var _date = new GlideDateTime(pDate).getLocalDate();
 		
 		if(_date == _now) {
 			//gs.addInfoMessage("Date is Today!!");
@@ -54,7 +66,7 @@ NeedItUtils.prototype = {
         <sys_created_on>2018-01-11 00:14:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>276b63420fef030075b80cbce1050eb8</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>NeedItUtils</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy>read</sys_policy>
@@ -62,6 +74,6 @@ NeedItUtils.prototype = {
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_include_276b63420fef030075b80cbce1050eb8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-11 12:52:30</sys_updated_on>
+        <sys_updated_on>2018-01-11 18:04:06</sys_updated_on>
     </sys_script_include>
 </record_update>

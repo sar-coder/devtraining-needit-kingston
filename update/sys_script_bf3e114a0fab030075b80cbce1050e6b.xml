@@ -32,10 +32,10 @@
 
 	// Pass the Requested for email to the Script Include.  Store the return
 	// value from the Script Include in the isEmail variable
-	var isEmail = validateEmailAddress(current.u_requested_for_email);
+	//var isEmail = validateEmailAddress(current.u_requested_for_email);
 	// If isEmail is false (email address syntax is not valid) do not save
 	// the record.  Write an error message to the screen.
-	if(isEmail == false){
+	if(!validateEmailAddress(current.u_requested_for_email)){
 		gs.addErrorMessage(current.u_requested_for_email + " is not a valid email address.  You must provide a valid email address.");
 		current.setAbortAction(true);
 	}
@@ -49,7 +49,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bf3e114a0fab030075b80cbce1050e6b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Email Address Syntax Validate</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -58,7 +58,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_bf3e114a0fab030075b80cbce1050e6b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-10 13:57:37</sys_updated_on>
+        <sys_updated_on>2018-01-11 13:38:52</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
