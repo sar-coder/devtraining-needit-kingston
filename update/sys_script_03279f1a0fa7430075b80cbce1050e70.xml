@@ -34,6 +34,9 @@
 	//gs.addInfoMessage('Is email address valid? (' + _email +  '): ' + (SarTool.isValidEmailAddress(_email) ? 'T' : 'F'));
 
 	_email = 'test@tester.com';
+	_user = gs.getUser();
+	_email = _user.getEmail();
+	
 	gs.addInfoMessage('Is email address valid? (' + _email +  '): ' + (SarTool.isValidEmailAddress(_email) ? 'T' : 'F'));
 	//Call static method in 'NeedItUtils' class
 	//gs.addInfoMessage('Is email address valid? (' + _email +  '): ' + (NeedItUtils.isValidEmailAddress(_email) ? 'T' : 'F'));
@@ -41,7 +44,7 @@
 	//Call class (non-static) method in instantiated 'NeedItUtils' class
 	//var _utils = new NeedItUtils();
 	//gs.addInfoMessage('Is email address valid? (' + _email +  '): ' + (_utils.isValidEmail(_email) ? 'T' : 'F'));
-	
+/*	
 	//var _date = new GlideDateTime('2017-07-23 22:18:30'); //UTC
 	var _date = new GlideDateTime(); //UTC
 	
@@ -52,6 +55,13 @@
 	
 	gs.addInfoMessage("The time is: <b>" + _date.getLocalTime().getByFormat('HH:mm:ss') + '</b>');
 	gs.addInfoMessage("The time is: <b>" + SarTool.formatTimeWithMeridiam(_date.getLocalTime()) + '</b>');
+*/	
+	var _dbdemo = new DbDemo();
+	_dbdemo.displayUser(_user.getID());
+	_dbdemo.displayNeedItRequests();
+
+	
+	
 	
 
 })(current, previous);]]></script>
@@ -62,7 +72,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>03279f1a0fa7430075b80cbce1050e70</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>Testing static methods (server-side)</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -71,7 +81,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_03279f1a0fa7430075b80cbce1050e70</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-11 21:13:25</sys_updated_on>
+        <sys_updated_on>2018-01-12 15:36:57</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>
