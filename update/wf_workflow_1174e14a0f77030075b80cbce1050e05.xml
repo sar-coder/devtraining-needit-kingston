@@ -35,12 +35,12 @@ This is my second workflow because the  first one didn't have a 'rejected' node 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-01-23 16:10:13</sys_created_on>
         <sys_id>d94a7c960f3f030075b80cbce1050e3a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-01-23 18:22:47</sys_updated_on>
+        <sys_updated_on>2018-01-23 21:50:12</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="_SAR Test 1">1174e14a0f77030075b80cbce1050e05</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
